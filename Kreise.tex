@@ -1,7 +1,50 @@
 \section{Kreise}
-\begin{frame}{Kreise}{Graph coloring}
-	\begin{itemize}
-		\item Eulertour
-		\item Hamilton-Kreis
-	\end{itemize}
+\begin{frame}
+	\tableofcontents[ 
+	sectionstyle=show/hide
+	]
+\end{frame}
+
+\subsection{Eulerkreisproblem}
+\begin{frame}{Eulerkreisproblem}{Eulerian path}
+	\begin{figure}
+		\begin{tikzpicture}[->,scale=1.8, auto,swap]
+			% Draw a 7,11 network
+			% First we draw the vertices
+			\foreach \pos/\name in {{(0,0)/a}, {(0,2)/b}, {(1,2)/c},
+				                    {(1,0)/d}, {(2,1)/e}, {(3,1)/f}, 
+									{(4,2)/g}, {(5,2)/h}, {(4,0)/i},
+									{(5,0)/j}}
+				\node[vertex] (\name) at \pos {$\name$};
+			% Connect vertices with edges and draw weights
+			\foreach \source/ \dest /\pos in {a/b/,b/c/,c/d/,d/a/,
+										c/e/bend left, d/e/,e/c/,
+										e/f/,
+										f/g/, f/i/,g/f/bend right,i/f/bend left,
+										g/h/, h/j/, j/i/, i/g/}
+				\path (\source) edge [\pos] node {} (\dest);
+		\end{tikzpicture}
+	\end{figure}
+\end{frame}
+
+\subsection{Hamiltonkreisproblem}
+\begin{frame}{Hamiltonkreisproblem}{Hamiltonian path}
+	\begin{figure}
+		\begin{tikzpicture}[->,scale=1.8, auto,swap]
+			% Draw a 7,11 network
+			% First we draw the vertices
+			\foreach \pos/\name in {{(0,0)/a}, {(0,2)/b}, {(1,2)/c},
+				                    {(1,0)/d}, {(2,1)/e}, {(3,1)/f}, 
+									{(4,2)/g}, {(5,2)/h}, {(4,0)/i},
+									{(5,0)/j}}
+				\node[vertex] (\name) at \pos {$\name$};
+			% Connect vertices with edges and draw weights
+			\foreach \source/ \dest /\pos in {a/b/,b/c/,c/d/,d/a/,
+										c/e/bend left, d/e/,e/c/,
+										e/f/,
+										f/g/, f/i/,g/f/bend right,i/f/bend left,
+										g/h/, h/j/, j/i/, i/g/}
+				\path (\source) edge [\pos] node {} (\dest);
+		\end{tikzpicture}
+	\end{figure}
 \end{frame}
