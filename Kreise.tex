@@ -6,7 +6,18 @@
 \end{frame}
 
 \subsection{Eulerkreisproblem}
+
 \begin{frame}{Eulerkreisproblem}{Eulerian path}
+	\begin{block}{Eulerkreis}
+		Ein Eulerkreis in einem Graphen $(V,E)$ ist ein Tupel $(e_1,e_2,...,e_n)$ mit $e_i \in E$ für $i = 1,...,n$ und $\left|E\right| = n$. Hierbei soll gelten: $i \neq j \Rightarrow e_i \neq e_j$. Des weiteren sollen für $j = i+1$ $e_i$ und $e_j$ jeweils zum selben Knoten inzident sein, und $e_1$ soll zum gleichen Knoten inzident sein wie $e_n$
+	\end{block}
+
+	\begin{block}{Erklärung}
+		Ein Eulerkreis ist ein Zirkel in einem Graphen, in dem jede Kante genau einmal benutzt wird.
+	\end{block}
+\end{frame}
+
+\begin{frame}
 	\begin{figure}
 		\begin{tikzpicture}[->,scale=1.8, auto,swap]
 			% Draw a 7,11 network
@@ -29,6 +40,16 @@
 
 \subsection{Hamiltonkreisproblem}
 \begin{frame}{Hamiltonkreisproblem}{Hamiltonian path}
+	\begin{block}{Hamiltonkreis}
+		Ein Hamiltonkreis in einem Graphen $(V,E)$ ist ein Tupel $(v_1,v_2,...,v_n)$ mit $v_i \in V$ für $i = 1,...,n$ und $\left|V\right| = n$. Hierbei soll gelten: $i \neq j \Rightarrow v_i \neq v_j$. Des weiteren sollen für $j = i+1$ $v_i$ und $v_j$ jeweils zueinander adjazent sein, und $v_1$ soll soll adjazent sein zu $v_n$
+	\end{block}
+
+	\begin{block}{Erklärung}
+		Ein Hamiltonkreis ist ein Zirkel in einem Graphen, in dem jeder Knoten genau einmal benutzt wird.
+	\end{block}
+\end{frame}
+
+\begin{frame}
 	\begin{figure}
 		\begin{tikzpicture}[->,scale=1.8, auto,swap]
 			% Draw a 7,11 network
